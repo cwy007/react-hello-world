@@ -27,3 +27,9 @@ npm install html-webpack-plugin clean-webpack-plugin -D
 ```
 
 WebSocket 是基于 TCP 的全双工通信协议。
+
+## ch02
+
+```bash
+npm install events -S
+```
