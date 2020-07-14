@@ -22,6 +22,8 @@ npm install -S react react-dom
 
 npm install webpack-dev-server -D
 
+npm install html-webpack-plugin clean-webpack-plugin -D
+
 ```
 
 WebSocket 是基于 TCP 的全双工通信协议。

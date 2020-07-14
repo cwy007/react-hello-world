@@ -1,7 +1,9 @@
 var webpack = require('webpack');
 var path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var App_DIR = path.resolve(__dirname, 'src');     // 项目路径
-var BUILD_DIR = path.resolve(__dirname, 'build'); // 构建路径
+var BUILD_DIR = path.resolve(__dirname, 'dist');  // 输出路径
 var config = {
   entry: App_DIR + '/index.jsx', // 项目入口
   output: {
@@ -19,10 +21,20 @@ var config = {
       }
     ]
   },
-  devServer: {
+  devServer: {  // 在开发模式下，提供虚拟服务器用于项目开发和测试
     port: 3000,
-    contentBase: "./build"
-  }
+    contentBase: "./dist"
+  },
+  plugins: [   // 拓展Webpack功能
+    new HtmlWebpackPlugin({  // 生成HTML文件
+      template: "index.html",
+      // favicon: "favicon.ico",
+      inject: true,
+      sourceMap: true,
+      chunksSortMode: "auto"
+    }),
+    new CleanWebpackPlugin()  // 清除文件
+  ]
 };
 
 module.exports = config;
