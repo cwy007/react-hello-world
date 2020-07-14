@@ -11,8 +11,13 @@ npm i webpack webpack-cli -D
 ./node_modules/.bin/webpack -d
 -d           shortcut for --debug --devtool eval-cheap-module-source-map
 
-browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html, *.js"
+browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html, **/*.js"
 
 npm install -D babel-core babel-loader@7 babel-preset-env babel-preset-react
+
+npm install -S react react-dom
+
+./node_modules/.bin/webpack -d --watch
+监听文件变化，自动执行编译命令
 
 ```
