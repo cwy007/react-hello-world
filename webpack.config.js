@@ -18,6 +18,10 @@ var config = {
         }
       }
     ]
+  },
+  devServer: {
+    port: 3000,
+    contentBase: "./build"
   }
 };
 

@@ -20,4 +20,8 @@ npm install -S react react-dom
 ./node_modules/.bin/webpack -d --watch
 监听文件变化，自动执行编译命令
 
+npm install webpack-dev-server -D
+
 ```
+
+WebSocket 是基于 TCP 的全双工通信协议。
