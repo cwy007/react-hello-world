@@ -18,6 +18,10 @@ var config = {
         use: {
           loader: "babel-loader"  // 使用 babel-loader 这个 loader 库
         }
+      },
+      {
+        test: /\.css$/,  // 只加载 .css 文件
+        loader: 'style-loader!css-loader'  // 同时运行两个loader
       }
     ]
   },

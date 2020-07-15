@@ -32,4 +32,24 @@ WebSocket 是基于 TCP 的全双工通信协议。
 
 ```bash
 npm install events -S
+
+npm install css-loader style-loader -D
 ```
+
+getDerivedStateFromProps() 在组件挂载时，以及每当props更新时被触发，用于在props更改时
+更新组件的状态，返回的对象将会与当前的状态合并。
+
+组件的数据更新会经历下面几个过程：
+
+```js
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+componentWillUpdate/UNSAFE_componentWillUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+```
+
+React组件生命周期流程图
+
+![React组件生命周期流程图](https://tva1.sinaimg.cn/large/007S8ZIlly1ggr0clk19fj30m80cadg7.jpg)
