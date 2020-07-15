@@ -53,3 +53,13 @@ componentDidUpdate()
 React组件生命周期流程图
 
 ![React组件生命周期流程图](https://tva1.sinaimg.cn/large/007S8ZIlly1ggr0clk19fj30m80cadg7.jpg)
+
+## ch04
+
+```bash
+npm install --save react-redux
+
+```
+
+容器组件与展示组件互相分离
+Provider需要包裹在整个应用组件的外部
